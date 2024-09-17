@@ -1,0 +1,212 @@
+2024-09-17 20:34:03,222 INFO metabase.util :: Maximum memory available to JVM: 247,5 MB
+2024-09-17 20:34:05,703 INFO util.encryption :: Saved credentials encryption is DISABLED for this Metabase instance. 🔓 
+ For more information, see https://metabase.com/docs/latest/operations-guide/encrypting-database-details-at-rest.html
+2024-09-17 20:34:06,494 WARN db.env :: WARNING: Using Metabase with an H2 application database is not recommended for production deployments. For production deployments, we highly recommend using Postgres, MySQL, or MariaDB instead. If you decide to continue to use H2, please be sure to back up the database file regularly. For more information, see https://metabase.com/docs/latest/operations-guide/migrating-from-h2.html
+2024-09-17 20:34:11,747 INFO driver.impl :: Registered abstract driver :sql  🚚
+2024-09-17 20:34:11,794 INFO driver.impl :: Registered abstract driver :sql-jdbc (parents: [:sql]) 🚚
+2024-09-17 20:34:11,794 INFO metabase.util :: Load driver :sql-jdbc took 19,1 ms
+2024-09-17 20:34:11,794 INFO driver.impl :: Registered driver :h2 (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:12,079 INFO driver.impl :: Registered driver :mysql (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:12,111 INFO driver.impl :: Registered driver :postgres (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,232 INFO metabase.core :: 
+Metabase v0.50.24 (3b63317) 
+
+Copyright © 2024 Metabase, Inc. 
+
+Metabase Enterprise Edition extensions are NOT PRESENT.
+2024-09-17 20:34:14,238 INFO metabase.core :: Starting Metabase in STANDALONE mode
+2024-09-17 20:34:14,280 INFO metabase.server :: Launching Embedded Jetty Webserver with config:
+ {:port 3000}
+
+2024-09-17 20:34:14,326 INFO metabase.core :: Starting Metabase version v0.50.24 (3b63317) ...
+2024-09-17 20:34:14,338 INFO metabase.core :: System info:
+ {"file.encoding" "UTF-8",
+ "java.runtime.name" "OpenJDK Runtime Environment",
+ "java.runtime.version" "11.0.24+8",
+ "java.vendor" "Eclipse Adoptium",
+ "java.vendor.url" "https://adoptium.net/",
+ "java.version" "11.0.24",
+ "java.vm.name" "OpenJDK Client VM",
+ "java.vm.version" "11.0.24+8",
+ "os.name" "Windows 11",
+ "os.version" "10.0",
+ "user.language" "pt",
+ "user.timezone" "America/Sao_Paulo"}
+
+2024-09-17 20:34:14,342 INFO metabase.plugins :: Loading plugins in F:\MB Service Manager\version\0.50.24\plugins...
+2024-09-17 20:34:14,658 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :athena...
+2024-09-17 20:34:14,658 INFO driver.impl :: Registered driver :athena (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,674 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :bigquery-cloud-sdk...
+2024-09-17 20:34:14,674 INFO driver.impl :: Registered driver :bigquery-cloud-sdk (parents: [:sql]) 🚚
+2024-09-17 20:34:14,690 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :druid-jdbc...
+2024-09-17 20:34:14,690 INFO driver.impl :: Registered driver :druid-jdbc (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,690 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :druid...
+2024-09-17 20:34:14,690 INFO driver.impl :: Registered driver :druid  🚚
+2024-09-17 20:34:14,705 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :mongo...
+2024-09-17 20:34:14,705 INFO driver.impl :: Registered driver :mongo  🚚
+2024-09-17 20:34:14,705 INFO plugins.dependencies :: Metabase cannot initialize plugin Metabase Oracle Driver due to required dependencies. Metabase requires the Oracle JDBC driver in order to connect to Oracle databases, but we can't ship it as part of Metabase due to licensing restrictions. See https://metabase.com/docs/latest/administration-guide/databases/oracle.html for more details.
+
+2024-09-17 20:34:14,705 INFO plugins.dependencies :: Metabase Oracle Driver dependency {:class oracle.jdbc.OracleDriver} satisfied? false
+2024-09-17 20:34:14,705 INFO plugins.dependencies :: Plugins with unsatisfied deps: ["Metabase Oracle Driver"]
+2024-09-17 20:34:14,721 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :presto-jdbc...
+2024-09-17 20:34:14,721 INFO driver.impl :: Registered driver :presto-jdbc (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,721 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :redshift...
+2024-09-17 20:34:14,721 INFO driver.impl :: Registered driver :redshift (parents: [:postgres]) 🚚
+2024-09-17 20:34:14,784 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :snowflake...
+2024-09-17 20:34:14,784 INFO driver.impl :: Registered driver :snowflake (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,784 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :hive-like...
+2024-09-17 20:34:14,784 INFO driver.impl :: Registered abstract driver :hive-like (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,784 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :sparksql...
+2024-09-17 20:34:14,784 INFO driver.impl :: Registered driver :sparksql (parents: [:hive-like]) 🚚
+2024-09-17 20:34:14,784 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :sqlite...
+2024-09-17 20:34:14,784 INFO driver.impl :: Registered driver :sqlite (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,800 DEBUG plugins.lazy-loaded-driver :: Registering lazy loading driver :sqlserver...
+2024-09-17 20:34:14,800 INFO driver.impl :: Registered driver :sqlserver (parents: [:sql-jdbc]) 🚚
+2024-09-17 20:34:14,800 INFO plugins.dependencies :: Metabase cannot initialize plugin Metabase Vertica Driver due to required dependencies. Metabase requires the Vertica JDBC driver in order to connect to Vertica databases, but we can't ship it as part of Metabase due to licensing restrictions. See https://metabase.com/docs/latest/administration-guide/databases/vertica.html for more details.
+
+2024-09-17 20:34:14,800 INFO plugins.dependencies :: Metabase Vertica Driver dependency {:class com.vertica.jdbc.Driver} satisfied? false
+2024-09-17 20:34:14,800 INFO plugins.dependencies :: Plugins with unsatisfied deps: ["Metabase Oracle Driver" "Metabase Vertica Driver"]
+2024-09-17 20:34:14,800 INFO metabase.core :: Setting up and migrating Metabase DB. Please sit tight, this may take a minute...
+2024-09-17 20:34:14,800 INFO db.setup :: Verifying h2 Database Connection ...
+2024-09-17 20:34:15,194 INFO db.setup :: Successfully verified H2 2.1.214 (2022-06-13) application database connection. ✅
+2024-09-17 20:34:15,194 INFO db.setup :: Checking if a database downgrade is required...
+2024-09-17 20:34:15,226 INFO liquibase.database :: Set default schema name to PUBLIC
+2024-09-17 20:34:15,588 INFO liquibase :: Parsed changelog file 'liquibase.yaml'
+2024-09-17 20:34:15,682 INFO db.setup :: Running Database Migrations...
+2024-09-17 20:34:15,682 INFO db.setup :: Setting up Liquibase...
+2024-09-17 20:34:15,698 INFO liquibase.database :: Set default schema name to PUBLIC
+2024-09-17 20:34:15,823 INFO liquibase :: Parsed changelog file 'liquibase.yaml'
+2024-09-17 20:34:15,823 INFO db.liquibase :: Updating liquibase table to reflect consolidated changeset filenames
+2024-09-17 20:34:15,855 INFO liquibase.lockservice :: Successfully acquired change log lock
+2024-09-17 20:34:15,855 INFO db.liquibase :: No migration lock found.
+2024-09-17 20:34:15,855 INFO db.liquibase :: Migration lock acquired.
+2024-09-17 20:34:15,902 INFO liquibase.lockservice :: Successfully released change log lock
+2024-09-17 20:34:15,902 INFO db.setup :: Liquibase is ready.
+2024-09-17 20:34:15,902 INFO db.liquibase :: Checking if Database has unrun migrations...
+2024-09-17 20:34:15,902 INFO liquibase.database :: Set default schema name to PUBLIC
+2024-09-17 20:34:16,029 INFO liquibase :: Parsed changelog file 'liquibase.yaml'
+2024-09-17 20:34:16,045 INFO liquibase.changelog :: Reading from "PUBLIC"."DATABASECHANGELOG"
+2024-09-17 20:34:16,297 INFO db.liquibase :: No unrun migrations found.
+2024-09-17 20:34:16,297 INFO db.setup :: Database Migrations Current ... ✅
+2024-09-17 20:34:16,297 INFO metabase.util :: Database setup took 1,5 s
+2024-09-17 20:34:16,344 INFO metabase.core :: Looks like this is a new installation ... preparing setup wizard
+2024-09-17 20:34:16,360 INFO metabase.core :: Please use the following URL to setup your Metabase installation:
+
+http://localhost:3000/setup/
+
+
+2024-09-17 20:34:16,360 INFO metabase.events :: Loading events namespace: metabase.events.audit-log 👂
+2024-09-17 20:34:16,392 INFO metabase.events :: Loading events namespace: metabase.events.driver-notifications 👂
+2024-09-17 20:34:16,407 INFO metabase.events :: Loading events namespace: metabase.events.last-login 👂
+2024-09-17 20:34:16,407 INFO metabase.events :: Loading events namespace: metabase.events.persisted-info 👂
+2024-09-17 20:34:16,423 INFO metabase.events :: Loading events namespace: metabase.events.recent-views 👂
+2024-09-17 20:34:16,439 INFO metabase.events :: Loading events namespace: metabase.events.revision 👂
+2024-09-17 20:34:16,455 INFO metabase.events :: Loading events namespace: metabase.events.schema 👂
+2024-09-17 20:34:16,455 INFO metabase.events :: Loading events namespace: metabase.events.sync-database 👂
+2024-09-17 20:34:16,470 INFO metabase.events :: Loading events namespace: metabase.events.view-log 👂
+2024-09-17 20:34:16,517 INFO metabase.sample-data :: Loading sample database
+2024-09-17 20:34:16,596 INFO util.files :: Extract file /sample-database.db.mv.db -> F:\MB Service Manager\version\0.50.24\plugins\sample-database.db.mv.db
+2024-09-17 20:34:16,706 INFO driver.impl :: Initializing driver :sql...
+2024-09-17 20:34:16,709 INFO driver.impl :: Initializing driver :sql-jdbc...
+2024-09-17 20:34:16,709 INFO driver.impl :: Initializing driver :h2...
+2024-09-17 20:34:16,770 INFO task.sync-databases :: A trigger for "Sync and Analyze" of Database "Sample Database" has been enabled with schedule: "0 26 * * * ? *"
+2024-09-17 20:34:16,770 INFO task.sync-databases :: A trigger for "Scan Field Values" of Database "Sample Database" has been enabled with schedule: "0 0 17 * * ? *"
+2024-09-17 20:34:16,785 INFO sync.util :: STARTING: Sync h2 Database 1 ''Sample Database''
+2024-09-17 20:34:16,785 INFO sync.util :: STARTING: Sync metadata for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:16,895 INFO sync.util :: STARTING: step ''sync-dbms-version'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:16,911 INFO sync.util :: FINISHED: step ''sync-dbms-version'' for h2 Database 1 ''Sample Database'' (28,7 ms)
+2024-09-17 20:34:16,911 INFO sync.util :: STARTING: step ''sync-timezone'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:16,928 INFO sync-metadata.sync-timezone :: :h2 database 1 default timezone is "America/Sao_Paulo"
+2024-09-17 20:34:16,928 INFO sync.util :: FINISHED: step ''sync-timezone'' for h2 Database 1 ''Sample Database'' (9,4 ms)
+2024-09-17 20:34:16,928 INFO sync.util :: STARTING: step ''sync-tables'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:16,958 INFO sync-metadata.tables :: Updating table metadata for Table 8 ''PUBLIC.PRODUCTS''
+2024-09-17 20:34:16,958 INFO sync-metadata.tables :: Updating table metadata for Table 3 ''PUBLIC.PEOPLE''
+2024-09-17 20:34:16,958 INFO sync-metadata.tables :: Updating table metadata for Table 7 ''PUBLIC.INVOICES''
+2024-09-17 20:34:16,958 INFO sync-metadata.tables :: Updating table metadata for Table 5 ''PUBLIC.ORDERS''
+2024-09-17 20:34:16,958 INFO sync-metadata.tables :: Updating table metadata for Table 4 ''PUBLIC.REVIEWS''
+2024-09-17 20:34:16,958 INFO sync-metadata.tables :: Updating table metadata for Table 2 ''PUBLIC.FEEDBACK''
+2024-09-17 20:34:16,973 INFO sync-metadata.tables :: Updating table metadata for Table 1 ''PUBLIC.ANALYTIC_EVENTS''
+2024-09-17 20:34:16,973 INFO sync-metadata.tables :: Updating table metadata for Table 6 ''PUBLIC.ACCOUNTS''
+2024-09-17 20:34:16,973 INFO sync.util :: FINISHED: step ''sync-tables'' for h2 Database 1 ''Sample Database'' (41,7 ms)
+2024-09-17 20:34:16,973 INFO sync.util :: STARTING: step ''sync-fields'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:17,178 INFO sync.util :: FINISHED: step ''sync-fields'' for h2 Database 1 ''Sample Database'' (210,8 ms)
+2024-09-17 20:34:17,178 INFO sync.util :: STARTING: step ''sync-fks'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:17,241 INFO sync.util :: FINISHED: step ''sync-fks'' for h2 Database 1 ''Sample Database'' (54,7 ms)
+2024-09-17 20:34:17,244 INFO sync.util :: STARTING: step ''sync-indexes'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:17,463 INFO sync.util :: FINISHED: step ''sync-indexes'' for h2 Database 1 ''Sample Database'' (229,5 ms)
+2024-09-17 20:34:17,463 INFO sync.util :: STARTING: step ''sync-metabase-metadata'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,030 INFO task.sync-databases :: A trigger for "Sync and Analyze" of Database "Sample Database" has been enabled with schedule: "0 26 * * * ? *"
+2024-09-17 20:34:18,030 INFO task.sync-databases :: A trigger for "Scan Field Values" of Database "Sample Database" has been enabled with schedule: "0 0 17 * * ? *"
+2024-09-17 20:34:18,030 INFO task.sync-databases :: A trigger for "Sync and Analyze" of Database "Sample Database" has been enabled with schedule: "0 26 * * * ? *"
+2024-09-17 20:34:18,030 INFO task.sync-databases :: A trigger for "Scan Field Values" of Database "Sample Database" has been enabled with schedule: "0 0 17 * * ? *"
+2024-09-17 20:34:18,046 INFO task.sync-databases :: A trigger for "Sync and Analyze" of Database "Sample Database" has been enabled with schedule: "0 26 * * * ? *"
+2024-09-17 20:34:18,046 INFO task.sync-databases :: A trigger for "Scan Field Values" of Database "Sample Database" has been enabled with schedule: "0 0 17 * * ? *"
+2024-09-17 20:34:18,141 INFO sync.util :: FINISHED: step ''sync-metabase-metadata'' for h2 Database 1 ''Sample Database'' (669,9 ms)
+2024-09-17 20:34:18,141 INFO sync.util :: STARTING: step ''sync-table-privileges'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,145 INFO sync.util :: FINISHED: step ''sync-table-privileges'' for h2 Database 1 ''Sample Database'' (5,9 ms)
+2024-09-17 20:34:18,145 INFO sync.util :: FINISHED: Sync metadata for h2 Database 1 ''Sample Database'' (1,4 s)
+2024-09-17 20:34:18,145 INFO sync.util :: STARTING: Analyze data for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,156 INFO sync.util :: STARTING: step ''fingerprint-fields'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,189 INFO sync.analyze :: fingerprint-fields Analyzed [*****·············································] 😢   12% Table 3 ''PUBLIC.PEOPLE''
+2024-09-17 20:34:18,204 INFO sync.analyze :: fingerprint-fields Analyzed [***********·······································] 😒   24% Table 6 ''PUBLIC.ACCOUNTS''
+2024-09-17 20:34:18,204 INFO sync.util :: FINISHED: step ''fingerprint-fields'' for h2 Database 1 ''Sample Database'' (48,9 ms)
+2024-09-17 20:34:18,204 INFO sync.util :: STARTING: step ''classify-fields'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,220 INFO sync.analyze :: classify-fields Analyzed [******************································] 😕   36% Table 1 ''PUBLIC.ANALYTIC_EVENTS''
+2024-09-17 20:34:18,220 INFO sync.analyze :: classify-fields Analyzed [***********************···························] 😬   48% Table 4 ''PUBLIC.REVIEWS''
+2024-09-17 20:34:18,236 INFO sync.analyze :: classify-fields Analyzed [******************************····················] 😌   60% Table 7 ''PUBLIC.INVOICES''
+2024-09-17 20:34:18,236 INFO sync.util :: FINISHED: step ''classify-fields'' for h2 Database 1 ''Sample Database'' (25,8 ms)
+2024-09-17 20:34:18,236 INFO sync.util :: STARTING: step ''classify-tables'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,245 INFO sync.analyze :: classify-tables Analyzed [************************************··············] 😋   72% Table 2 ''PUBLIC.FEEDBACK''
+2024-09-17 20:34:18,245 INFO sync.analyze :: classify-tables Analyzed [*****************************************·········] 😊   84% Table 5 ''PUBLIC.ORDERS''
+2024-09-17 20:34:18,251 INFO sync.analyze :: classify-tables Analyzed [***********************************************···] 😎   96% Table 8 ''PUBLIC.PRODUCTS''
+2024-09-17 20:34:18,251 INFO sync.util :: FINISHED: step ''classify-tables'' for h2 Database 1 ''Sample Database'' (13,2 ms)
+2024-09-17 20:34:18,251 INFO sync.util :: FINISHED: Analyze data for h2 Database 1 ''Sample Database'' (105,1 ms)
+2024-09-17 20:34:18,251 INFO sync.util :: STARTING: Cache field values in h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,251 INFO sync.util :: STARTING: step ''delete-expired-advanced-field-values'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:18,520 INFO sync.util :: FINISHED: step ''delete-expired-advanced-field-values'' for h2 Database 1 ''Sample Database'' (267,9 ms)
+2024-09-17 20:34:18,520 INFO sync.util :: STARTING: step ''update-field-values'' for h2 Database 1 ''Sample Database''
+2024-09-17 20:34:19,419 INFO sync.util :: FINISHED: step ''update-field-values'' for h2 Database 1 ''Sample Database'' (890,8 ms)
+2024-09-17 20:34:19,419 INFO sync.util :: FINISHED: Cache field values in h2 Database 1 ''Sample Database'' (1,2 s)
+2024-09-17 20:34:19,419 INFO sync.util :: FINISHED: Sync h2 Database 1 ''Sample Database'' (2,6 s)
+2024-09-17 20:34:19,448 INFO impl.StdSchedulerFactory :: Using default implementation for ThreadExecutor
+2024-09-17 20:34:19,451 INFO core.SchedulerSignalerImpl :: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-09-17 20:34:19,451 INFO core.QuartzScheduler :: Quartz Scheduler v.2.3.2 created.
+2024-09-17 20:34:19,451 INFO jdbcjobstore.JobStoreTX :: Using db table-based data access locking (synchronization).
+2024-09-17 20:34:19,451 INFO jdbcjobstore.JobStoreTX :: JobStoreTX initialized.
+2024-09-17 20:34:19,451 INFO core.QuartzScheduler :: Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MetabaseScheduler' with instanceId 'DESKTOP-UMR7V3U1726616059451'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is clustered.
+
+2024-09-17 20:34:19,451 INFO impl.StdSchedulerFactory :: Quartz scheduler 'MetabaseScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2024-09-17 20:34:19,451 INFO impl.StdSchedulerFactory :: Quartz scheduler version: 2.3.2
+2024-09-17 20:34:19,529 INFO core.QuartzScheduler :: Scheduler MetabaseScheduler_$_DESKTOP-UMR7V3U1726616059451 paused.
+2024-09-17 20:34:19,529 INFO metabase.task :: Task scheduler initialized into standby mode.
+2024-09-17 20:34:19,561 INFO metabase.task :: Initializing task Cache 📆
+2024-09-17 20:34:19,561 INFO metabase.task :: Initializing task SyncDatabases 📆
+2024-09-17 20:34:19,577 INFO task.sync-databases :: Updated default schedules for 0 databases
+2024-09-17 20:34:19,577 INFO metabase.task :: Initializing task PersistRefresh 📆
+2024-09-17 20:34:19,577 INFO metabase.task :: Initializing task CheckForNewVersions 📆
+2024-09-17 20:34:19,592 INFO metabase.task :: Initializing task PersistPrune 📆
+2024-09-17 20:34:19,592 INFO metabase.task :: Initializing task SendAnonymousUsageStats 📆
+2024-09-17 20:34:19,592 INFO metabase.task :: Initializing task ModelIndexValues 📆
+2024-09-17 20:34:19,592 INFO metabase.task :: Initializing task RefreshSlackChannelsAndUsers 📆
+2024-09-17 20:34:19,592 INFO metabase.task :: Initializing task TruncateAuditTables 📆
+2024-09-17 20:34:19,609 INFO metabase.task :: Initializing task SendPulses 📆
+2024-09-17 20:34:19,609 INFO metabase.task :: Initializing task SendFollowUpEmails 📆
+2024-09-17 20:34:19,609 INFO metabase.task :: Initializing task SendCreatorSentimentEmails 📆
+2024-09-17 20:34:19,609 INFO metabase.task :: Initializing task SendLegacyNoSelfServiceEmail 📆
+2024-09-17 20:34:19,609 INFO metabase.task :: Initializing task TaskHistoryCleanup 📆
+2024-09-17 20:34:19,624 INFO metabase.task :: Initializing task SendWarnPulseRemovalEmail 📆
+2024-09-17 20:34:19,624 INFO jdbcjobstore.JobStoreTX :: ClusterManager: detected 1 failed or restarted instances.
+2024-09-17 20:34:19,624 INFO jdbcjobstore.JobStoreTX :: ClusterManager: Scanning for instance "DESKTOP-UMR7V3U1726616009650"'s failed in-progress jobs.
+2024-09-17 20:34:19,624 INFO core.QuartzScheduler :: Scheduler MetabaseScheduler_$_DESKTOP-UMR7V3U1726616059451 started.
+2024-09-17 20:34:19,624 INFO metabase.task :: Task scheduler started
+2024-09-17 20:34:19,624 INFO metabase.core :: Metabase Initialization COMPLETE in 20,8 s
+2024-09-17 20:34:19,639 INFO task.refresh-slack-channel-user-cache :: Slack is not configured, not refreshing slack user/channel cache.
+2024-09-17 20:34:32,602 INFO i18n.impl :: Reading available locales from locales.clj...
+2024-09-17 20:34:32,819 INFO util.fonts :: Reading available fonts from /frontend_client/app/fonts
+2024-09-17 20:34:33,271 DEBUG middleware.log :: GET /api/session/properties 200 54,0 ms (2 DB calls) App DB connections: 0/4 Jetty threads: 7/50 (1 idle, 0 queued) (51 total active threads) Queries in flight: 0 (0 queued) {:metabase-user-id nil}
