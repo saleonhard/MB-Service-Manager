@@ -89,7 +89,7 @@ Gostou do projeto? Quer colaborar? Entre em contato para discutir como você pod
 
 - **E-mail:** [sa.leonardo13@gmail.com](mailto:sa.leonardo13@gmail.com)
 - **LinkedIn:** [linkedin.com/in/aquinoleonardo](https://linkedin.com/in/aquinoleonardo)
-- **Twitter:** [@salenhard](https://twitter.com/salenhard)
+- **Twitter:** [@salenhard](https://twitter.com/saleonhard)
 
 ## Licença 📜
 
